@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="wrapper">
+            <div class="input-box">
+                <input id="password" type="text" disabled>
+                <span id="copy" onclick="copyPassword()">Copy</span>
+            </div>
+            <div class="form">
+                <div class="password-settings">
+                    <h2 class="title">Password Settings</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="checkbox" id="norepeat">
+                            <label for="norepeat">No Repeat Characters</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="uppercase" checked>
+                            <label for="uppercase">Uppercase (A-Z)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Lowercase (a-z)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="numbers" checked>
+                            <label for="numbers">Numbers (0-9)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="special" checked>
+                            <label for="special">Special (!-$^+)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="generate" onclick="generatePassword()">Generate Password</button>
+        </div>
+    </div>
+</body>
+</html>
