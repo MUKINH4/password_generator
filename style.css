@@ -62,6 +62,10 @@ body {
     width: 90%;
 }
 
+.options input[type="checkbox"] {
+    accent-color: #C80036;
+}
+
 #generate {
     width: 80%;
     display: block;
@@ -79,4 +83,11 @@ body {
     cursor: pointer;
     transition: 0.3s;
     color: #FFF5E1;
+}
+
+.length {
+    margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
 }

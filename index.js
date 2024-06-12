@@ -8,6 +8,13 @@ function getRandomChar(chars) {
     return chars[index];
 }
 
+const input = document.getElementById("length");
+const value = document.getElementById("value");
+value.textContent = input.value;
+input.addEventListener("input", (event) => {
+  value.textContent = event.target.value;
+});
+
 function generatePassword(){
     const passwordInput = document.getElementById('password');
     const noRepeatCheckbox = document.getElementById('norepeat');
@@ -28,7 +35,8 @@ function generatePassword(){
     } 
 
     let password = '';
-    const lenght = 12;
+    const lenght = document.getElementById('length').value;
+    
     while (password.length < lenght) {
         let char = getRandomChar(characters);
         if (noRepeatCheckbox.checked && password.includes(char)) continue;
